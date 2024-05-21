@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_homework/widget/curve_box_widget.dart';
 import 'package:flutter_ui_homework/widget/shoes_listview_widget.dart';
 
 class ShoesExploreWidget extends StatelessWidget {
@@ -7,7 +8,7 @@ class ShoesExploreWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[200],
+      color: Colors.white,
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: const Column(
         children: [
@@ -30,6 +31,8 @@ class ShoesExploreWidget extends StatelessWidget {
           ),
           //Category and Search Icon//////////////////////////////////
           SizedBox(height: 10),
+          CurveBoxWidget(),
+          SizedBox(height: 20),
           ShoesListViewWidget(),
         ],
       ),

@@ -8,6 +8,7 @@ class Shoe {
   String logo;
   String detail;
   Color color;
+  String review;
 
   Shoe({
     required this.title,
@@ -17,5 +18,6 @@ class Shoe {
     required this.logo,
     required this.detail,
     required this.color,
+    required this.review,
   });
 }

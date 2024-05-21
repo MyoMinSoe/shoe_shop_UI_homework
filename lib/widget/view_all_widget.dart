@@ -1,47 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_homework/shoes/shoes_list.dart';
 import 'package:flutter_ui_homework/widget/detail_shoe.dart';
-import 'package:flutter_ui_homework/widget/view_all_widget.dart';
 
-class ShoesListViewWidget extends StatelessWidget {
-  const ShoesListViewWidget({super.key});
+class ViewAllWidget extends StatefulWidget {
+  const ViewAllWidget({super.key});
 
   @override
+  State<ViewAllWidget> createState() => _ViewAllWidgetState();
+}
+
+class _ViewAllWidgetState extends State<ViewAllWidget> {
+  @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        //Just For You and View All//////////////////////////////
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                'Just For You',
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              ),
-              InkWell(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (c) => const ViewAllWidget())),
-                child: Text(
-                  'VIEW ALL',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.green[600],
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
-            ],
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'All Shoes on Market',
+          style: TextStyle(color: Colors.black26),
         ),
-        //Shoes List///////////////////////////////////////////////////////////
-        const SizedBox(height: 20),
-        SizedBox(
+      ),
+      body: Center(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width * 0.9,
-          height: MediaQuery.of(context).size.height * 0.3,
+          height: MediaQuery.of(context).size.height * 0.9,
           child: ListView.builder(
-            itemCount: 2,
+            itemCount: shoeList.length,
             itemBuilder: (BuildContext context, int index) {
               return Hero(
                 tag: 1,
@@ -89,7 +72,7 @@ class ShoesListViewWidget extends StatelessWidget {
             },
           ),
         ),
-      ],
+      ),
     );
   }
 }
