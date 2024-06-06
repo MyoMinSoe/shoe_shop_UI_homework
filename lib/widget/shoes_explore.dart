@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_homework/widget/curve_box_widget.dart';
-import 'package:flutter_ui_homework/widget/shoes_listview_widget.dart';
+import 'package:flutter_ui_homework/widget/shoes_explore_widgets/curve_box_widget.dart';
+import 'package:flutter_ui_homework/widget/shoes_explore_widgets/shoes_listview_widget.dart';
 
 class ShoesExploreWidget extends StatelessWidget {
   const ShoesExploreWidget({super.key});
