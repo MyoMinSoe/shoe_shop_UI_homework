@@ -43,44 +43,41 @@ class ShoesListViewWidget extends StatelessWidget {
           child: ListView.builder(
             itemCount: 2,
             itemBuilder: (BuildContext context, int index) {
-              return Hero(
-                tag: 1,
-                child: InkWell(
-                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (c) => DetailShoe(index: index))),
-                  child: Container(
-                    padding: const EdgeInsets.all(5),
-                    margin: const EdgeInsets.only(bottom: 20),
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(25)),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black26,
-                          blurRadius: 20,
-                          offset: Offset(0, 10),
-                        ),
-                      ],
+              return InkWell(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (c) => DetailShoe(index: index))),
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.only(bottom: 20),
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(25)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 20,
+                        offset: Offset(0, 10),
+                      ),
+                    ],
+                  ),
+                  child: ListTile(
+                    leading: SizedBox(
+                      width: 80,
+                      child: Image.asset(shoeList[index].image),
                     ),
-                    child: ListTile(
-                      leading: SizedBox(
-                        width: 80,
-                        child: Image.asset(shoeList[index].image),
+                    title: Text(
+                      shoeList[index].title,
+                      style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
                       ),
-                      title: Text(
-                        shoeList[index].title,
-                        style: const TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      subtitle: Text(shoeList[index].brand),
-                      trailing: Text(
-                        shoeList[index].price,
-                        style: const TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w900,
-                        ),
+                    ),
+                    subtitle: Text(shoeList[index].brand),
+                    trailing: Text(
+                      shoeList[index].price,
+                      style: const TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w900,
                       ),
                     ),
                   ),

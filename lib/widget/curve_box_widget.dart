@@ -82,29 +82,26 @@ class CurveBoxWidget extends StatelessWidget {
                 Positioned(
                   right: 0,
                   bottom: 0,
-                  child: Hero(
-                    tag: 1,
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (c) => DetailShoe(index: index)));
-                      },
-                      child: Container(
-                        width: 60,
-                        height: 60,
-                        alignment: Alignment.center,
-                        decoration: const BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(15),
-                              bottomRight: Radius.circular(34)),
-                        ),
-                        child: const Text(
-                          '+',
-                          style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.white,
-                          ),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (c) => DetailShoe(index: index)));
+                    },
+                    child: Container(
+                      width: 60,
+                      height: 60,
+                      alignment: Alignment.center,
+                      decoration: const BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(15),
+                            bottomRight: Radius.circular(34)),
+                      ),
+                      child: const Text(
+                        '+',
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
                         ),
                       ),
                     ),
