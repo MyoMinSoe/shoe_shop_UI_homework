@@ -24,6 +24,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       extendBody: true,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         scrolledUnderElevation: 0,
         leading: Transform.flip(
           flipY: true,
@@ -41,24 +42,26 @@ class _HomeState extends State<Home> {
           // ),
           Container(
             width: double.infinity,
-            height: 80,
+            height: 60,
             decoration: const BoxDecoration(
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(color: Colors.black38, blurRadius: 40),
                 ],
                 borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(40),
-                    topRight: Radius.circular(40))),
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30))),
           ),
           ClipRRect(
             borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(40),
-              topRight: Radius.circular(40),
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
             ),
             child: BottomNavigationBar(
               currentIndex: index,
               elevation: 0,
+              selectedFontSize: 0,
+              unselectedFontSize: 0,
               backgroundColor: Colors.transparent,
               fixedColor: Colors.green[400],
               unselectedItemColor: Colors.black26,

@@ -14,6 +14,8 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
+        scrolledUnderElevation: 0,
         title: const Text(
           'All Shoes on Market',
           style: TextStyle(color: Colors.black26),
